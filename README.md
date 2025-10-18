@@ -1,19 +1,33 @@
 <div align="left">
 
-# rnm
+<img src="assets/rnml.svg" width="160" alt="rnm logo" />
 
-_Since this is my first time coding in zig, I have decided to make something useful, while keeping it barebones and somewhat crude, hence the logo._
+_First time coding in zig. Decided to make something moderately useful, while keeping it barebones and somewhat crude, hence the logo._
 
 #
 
 <br>
 
+## Install
+
+[![Download](https://img.shields.io/badge/release-latest-black?style=flat-square)](../../releases/latest)
+
+Download the latest binary from the [Releases](../../releases/latest) page  
+and place it in your `$PATH`.
+
+```bash
+chmod +x rnm
+sudo mv rnm /usr/local/bin/
+```
+
+<br>
+
 ## Available Flags
 
-- `-l` / `-L` (followed by a number 2–10) _defines the length_  
-- `-f` / `-F` (followed by a letter) _defines the first letter_  
-- `-v` / `-V` _prints the current version_  
-- `-h` / `-H` _shows the help message_
+- `-l` / `-L` <3–10> _defines the length_  
+- `-f` / `-F` <char> _defines the first letter_  
+- `-v` / `-V` / `version` _prints the current version_  
+- `-h` / `-H` / `help` _shows the help message_
 
 #### `-l` and `-f` are order-independent but cannot be grouped (yet).
 
@@ -25,10 +39,8 @@ _Since this is my first time coding in zig, I have decided to make something use
 
 <div align="center">
 
-──── ──── ──── ──── ────
+────
 
-Hopefully I get this done soon :)
-
-──── ──── ──── ──── ────
+**MIT License © 2025 bxavaby**
 
 </div>

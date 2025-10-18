@@ -1,27 +1,82 @@
+// Welcome to rnm/main.zig
+//
+// rnm, which stands for 'random name maker', is my first ever
+// project in zig!
+//
+// It is a command-line utility that generates random, READABLE
+// names by following a set of strict rules:
+//
+// - Names must be at least 3 characters long
+// - Names must be at most 10 characters long
+// - Vowels and consonants must alternate at all times
+//
+// Since there is a CLI, it is crucial to introduce flags,
+// as well as usage instructions, as follows:
+//
+// - --help/-help/-h/-H: shows the help message
+// - --version/-version/-v/-V: shows the version number
+// - -l/-L (followed by a number 3-10): defines the length
+// - -f/-F (followed by a letter): defines the first letter
+//
+// A total of 2 additional files are necessary for this project,
+// ensuring organization and clarity:
+//
+// - cli.zig: commands logic
+// - r.zig: generator logic
+//
+// Licensed under the MIT License.
+// Copyright (c) 2025 bxavaby
+//
+// Repo: https://github.com/bxavaby/rnm
+
 const std = @import("std");
 const rnm = @import("rnm");
 
 pub fn main() !void {
-    // Prints to stderr, ignoring potential errors.
-    std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
-    try rnm.bufferedPrint();
-}
+    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    const allocator = gpa.allocator();
 
-test "simple test" {
-    const gpa = std.testing.allocator;
-    var list: std.ArrayList(i32) = .empty;
-    defer list.deinit(gpa); // Try commenting this out and see if zig detects the memory leak!
-    try list.append(gpa, 42);
-    try std.testing.expectEqual(@as(i32, 42), list.pop());
-}
-
-test "fuzz example" {
-    const Context = struct {
-        fn testOne(context: @This(), input: []const u8) anyerror!void {
-            _ = context;
-            // Try passing `--fuzz` to `zig build test` and see if it manages to fail this test case!
-            try std.testing.expect(!std.mem.eql(u8, "canyoufindme", input));
-        }
+    // Parse cli args
+    const options = rnm.cli.parseArgs(allocator) catch |err| switch (err) {
+        error.MissingLength => {
+            rnm.cli.printHelpWithEr("missing argument after -l");
+            return;
+        },
+        error.InvalidLength => {
+            rnm.cli.printHelpWithEr("length must be 3-10");
+            return;
+        },
+        error.MissingFirstLetter => {
+            rnm.cli.printHelpWithEr("missing argument after -f");
+            return;
+        },
+        error.InvalidFirstLetter => {
+            rnm.cli.printHelpWithEr("first letter must be a single character a-z");
+            return;
+        },
+        error.UnknownFlag => {
+            rnm.cli.printHelpWithEr("unknown flag");
+            return;
+        },
+        else => |e| {
+            std.debug.print("unexpected error: {any}\n", .{e});
+            return;
+        },
     };
-    try std.testing.fuzz(Context{}, Context.testOne, .{});
+
+    if (options.help) {
+        std.debug.print("{s}\n{s}\n", .{ rnm.cli.LOGO, rnm.cli.HELP });
+        return;
+    }
+
+    if (options.version) {
+        std.debug.print("rnm {s}\n", .{rnm.cli.VERSION});
+        return;
+    }
+
+    // Local stack buffer for the name
+    var buffer: [10]u8 = undefined;
+    const name = try rnm.r.makeName(&buffer, options.length, options.first);
+
+    std.debug.print("{s}\n", .{name});
 }

@@ -1,8 +1,12 @@
+<div align="center">
+
+<img src="assets/rnml.svg" width="320" alt="rnm logo" />
+
+# _random name maker_
+
 <div align="left">
 
-<img src="assets/rnml.svg" width="160" alt="rnm logo" />
-
-_First time coding in zig. Decided to make something moderately useful, while keeping it barebones and somewhat crude, hence the logo._
+First time coding in zig. Decided to make something moderately useful, while keeping it barebones and somewhat crude, hence the logo.
 
 #
 

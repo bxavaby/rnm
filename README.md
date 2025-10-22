@@ -8,8 +8,6 @@
 
 First time coding in zig. Decided to make something moderately useful, while keeping it barebones and somewhat crude, hence the logo.
 
-#
-
 <br>
 
 ## Install

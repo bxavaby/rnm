@@ -35,8 +35,6 @@ sudo mv rnm /usr/local/bin/
 
 </div>
 
-#
-
 <br>
 
 <div align="center">

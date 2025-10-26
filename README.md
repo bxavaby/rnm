@@ -4,7 +4,8 @@
 
 ─────────────────
 
-![Linux](https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=D86830)
+![CLI](https://img.shields.io/badge/CLI-000000?style=for-the-badge&logo=gnometerminal&logoColor=D86830)
+![0→deps](https://img.shields.io/badge/0_deps-000000?style=for-the-badge&logoColor=D86830)
 ![Zig](https://img.shields.io/badge/Zig-%23000000.svg?style=for-the-badge&logo=zig&logoColor=D86830)
 
 # _random name maker_

@@ -2,44 +2,92 @@
 
 <img src="assets/rnml.svg" width="320" alt="rnm logo" />
 
+─────────────────
+
+![Linux](https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=D86830)
+![Zig](https://img.shields.io/badge/Zig-%23000000.svg?style=for-the-badge&logo=zig&logoColor=D86830)
+
 # _random name maker_
 
-<div align="left">
-
-First time coding in zig. Decided to make something moderately useful, while keeping it barebones and somewhat crude, hence the logo.
+### Generate random names in the command-line with ```rnm```
 
 <br>
 
+<img src="assets/demo.gif" width="600" alt="rnm demo" />
+
+<br>
+
+<div align="left">
+
 ## Install
 
-[![Download](https://img.shields.io/badge/release-latest-black?style=flat-square)](../../releases/latest)
+Download the latest binary from [**releases**](../../releases/latest) and add it to your PATH:
 
-Download the latest binary from the [Releases](../../releases/latest) page  
-and place it in your `$PATH`.
-
-```bash
+```
 chmod +x rnm
 sudo mv rnm /usr/local/bin/
 ```
 
 <br>
 
-## Available Flags
+<details>
+<summary><b>Build from source (alternative)</b></summary>
 
-- `-l` / `-L` <3–10> _defines the length_  
-- `-f` / `-F` <char> _defines the first letter_  
-- `-v` / `-V` / `version` _prints the current version_  
-- `-h` / `-H` / `help` _shows the help message_
+<br>
 
-#### `-l` and `-f` are order-independent but cannot be grouped (yet).
+```
+git clone https://github.com/bxavaby/rnm.git
+cd rnm
+zig build -Doptimize=ReleaseFast
+sudo mv zig-out/bin/rnm /usr/local/bin/
+```
+
+</details>
+
+<br>
+
+## Usage
+
+**Flags:**
+- `-l` `<3–10>` _defines the length_ 
+- `-f` `<char>` _defines the first letter_
+- `-v` / `version` _prints the current version_ 
+- `-h` / `help` _shows the help message_
+
+> ※ **Note:** `-l` and `-f` are order-independent but cannot be grouped (yet).
+
+<br>
+
+<details>
+<summary><b>Examples</b></summary>
+
+<br>
+
+```
+$ rnm
+favoda
+```
+
+```
+$ rnm -l 4
+pace
+```
+
+```
+$ rnm -f l -l 4 && rnm -f e -l 5
+losa
+ezura
+```
+
+</details>
 
 </div>
 
 <br>
 
-<div align="center">
+─────────────────
 
-────
+*First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
 
 **MIT License © 2025 bxavaby**
 

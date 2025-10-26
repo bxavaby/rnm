@@ -21,7 +21,7 @@
 
 ## Install
 
-Download the latest binary from [**releases**](../../releases/latest) and add it to your PATH:
+Download the latest binary from [**Releases**](../../releases/latest) and add it to your PATH:
 
 ```
 chmod +x rnm
@@ -87,8 +87,10 @@ ezura
 
 ─────────────────
 
-**MIT License © 2025 bxavaby**
-
 *First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
+
+**[Report Bug](../../issues)** | **[Suggest Feature](../../issues)**
+
+**MIT License © 2025 bxavaby**
 
 </div>

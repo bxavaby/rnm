@@ -38,7 +38,7 @@ sudo mv rnm /usr/local/bin/
 ```
 git clone https://github.com/bxavaby/rnm.git
 cd rnm
-zig build -Doptimize=ReleaseFast
+zig build -Doptimize=ReleaseSmall
 sudo mv zig-out/bin/rnm /usr/local/bin/
 ```
 

@@ -87,8 +87,8 @@ ezura
 
 ─────────────────
 
-*First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
-
 **MIT License © 2025 bxavaby**
+
+*First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
 
 </div>

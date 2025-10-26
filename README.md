@@ -13,7 +13,7 @@
 
 <br>
 
-<img src="assets/demo.gif" width="600" alt="rnm demo" />
+<img src="assets/help.png" width="958" alt="rnm help" />
 
 <br>
 

@@ -2,7 +2,7 @@
 
 <img src="assets/rnml.svg" width="320" alt="rnm logo" />
 
-─────────────────
+───────────────────
 
 ![CLI](https://img.shields.io/badge/CLI-000000?style=for-the-badge&logo=gnometerminal&logoColor=D86830)
 ![0→deps](https://img.shields.io/badge/0_deps-000000?style=for-the-badge&logoColor=D86830)
@@ -117,7 +117,7 @@ ezura
 
 <br>
 
-─────────────────
+───────────────────
 
 *First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
 

@@ -21,11 +21,36 @@
 
 ## Install
 
-Download the latest binary from [**Releases**](../../releases/latest) and add it to your PATH:
+Download the latest binary for your platform from [**Releases**](../../releases/latest) and add it to your PATH:
 
+<br>
+
+**Linux (x86_64):**
 ```
-chmod +x rnm
-sudo mv rnm /usr/local/bin/
+wget https://github.com/bxavaby/rnm/releases/latest/download/rnm-linux-x86_64
+chmod +x rnm-linux-x86_64
+sudo mv rnm-linux-x86_64 /usr/local/bin/rnm
+```
+
+**Linux (ARM64):**
+```
+wget https://github.com/bxavaby/rnm/releases/latest/download/rnm-linux-aarch64
+chmod +x rnm-linux-aarch64
+sudo mv rnm-linux-aarch64 /usr/local/bin/rnm
+```
+
+**macOS (Intel):**
+```
+curl -LO https://github.com/bxavaby/rnm/releases/latest/download/rnm-macos-x86_64
+chmod +x rnm-macos-x86_64
+sudo mv rnm-macos-x86_64 /usr/local/bin/rnm
+```
+
+**macOS (Apple Silicon):**
+```
+curl -LO https://github.com/bxavaby/rnm/releases/latest/download/rnm-macos-aarch64
+chmod +x rnm-macos-aarch64
+sudo mv rnm-macos-aarch64 /usr/local/bin/rnm
 ```
 
 <br>
@@ -46,6 +71,10 @@ sudo mv zig-out/bin/rnm /usr/local/bin/
 
 <br>
 
+> ※ **Note:** If you are on Windows, download `rnm-windows-x86_64.exe` from [Releases](../../releases/latest) and add to your PATH.
+
+<br>
+
 ## Usage
 
 **Flags:**
@@ -53,8 +82,6 @@ sudo mv zig-out/bin/rnm /usr/local/bin/
 - `-f` `<char>` _defines the first letter_
 - `-v` / `version` _prints the current version_ 
 - `-h` / `help` _shows the help message_
-
-> ※ **Note:** `-l` and `-f` are order-independent but cannot be grouped (yet).
 
 <br>
 
@@ -80,6 +107,10 @@ ezura
 ```
 
 </details>
+
+<br>
+
+> ※ **Note:** `-l` and `-f` are order-independent but cannot be grouped (yet).
 
 </div>
 

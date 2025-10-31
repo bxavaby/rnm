@@ -23,7 +23,7 @@ pub const LOGO =
     \\+---------------------+
 ;
 
-pub const VERSION = "v1.0.0";
+pub const VERSION = "v0.1.0";
 
 pub const HELP =
     \\

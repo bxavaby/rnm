@@ -1,4 +1,4 @@
-// Welcome to rnm/r.zig
+// Welcome to rnm/src/r.zig
 //
 // This file contains the logic for making random names.
 

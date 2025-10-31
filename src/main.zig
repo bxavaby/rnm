@@ -1,4 +1,4 @@
-// Welcome to rnm/main.zig
+// Welcome to rnm/src/main.zig
 //
 // rnm, which stands for 'random name maker', is my first ever
 // project in zig!

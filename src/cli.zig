@@ -1,4 +1,4 @@
-// Welcome to rnm/cli.zig
+// Welcome to rnm/src/cli.zig
 //
 // This file contains the logic needed for rnm
 // to process flags, parameters, as well as other

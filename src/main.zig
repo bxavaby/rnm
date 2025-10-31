@@ -10,7 +10,7 @@
 // - Names must be at most 10 characters long
 // - Vowels and consonants must alternate at all times
 //
-// Since there is a CLI, it is crucial to introduce flags,
+// Since it is a CLI application, it is crucial to introduce flags,
 // as well as usage instructions, as follows:
 //
 // - --help/-help/-h/-H: shows the help message
@@ -18,7 +18,7 @@
 // - -l/-L (followed by a number 3-10): defines the length
 // - -f/-F (followed by a letter): defines the first letter
 //
-// A total of 2 additional files are necessary for this project,
+// A total of 2 additional files is necessary for this project,
 // ensuring organization and clarity:
 //
 // - cli.zig: commands logic

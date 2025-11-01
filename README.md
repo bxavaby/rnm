@@ -4,9 +4,8 @@
 
 ───────────────────
 
-![CLI](https://img.shields.io/badge/CLI-000000?style=for-the-badge&logo=gnometerminal&logoColor=D86830)
-![0→deps](https://img.shields.io/badge/0_deps-000000?style=for-the-badge&logoColor=D86830)
-![Zig](https://img.shields.io/badge/Zig-%23000000.svg?style=for-the-badge&logo=zig&logoColor=D86830)
+![Deps](https://img.shields.io/badge/0-deps?style=plastic&label=deps&labelColor=000000&color=D86830)
+[![Last Commit](https://img.shields.io/github/last-commit/bxavaby/rnm?style=plastic&labelColor=000000&color=D86830)](https://github.com/bxavaby/rnm/commits/main)
 
 # _random name maker_
 

@@ -37,8 +37,6 @@ for target in "${TARGETS[@]}"; do
 		mv "$DIR/$REPO.exe" "$OUTPUT.exe"
 	fi
 	
-	sha256sum "$DIR"/rnm-* > "$DIR/checksums.txt"
-	
 	if [ -f "$OUTPUT" ] || [ -f "$OUTPUT.exe" ]; then
 		echo -e "\033[32m✓\033[0m Made $OUTPUT"
 		echo

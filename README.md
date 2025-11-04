@@ -13,7 +13,7 @@
 
 <br>
 
-<img src="assets/help.png" width="958" alt="rnm help" />
+<img src="assets/help.png" width="741" alt="rnm help" />
 
 <br><br>
 

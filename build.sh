@@ -2,10 +2,6 @@
 
 set -e
 
-#! /bin/bash
-
-set -e
-
 REPO="rnm"
 
 DIR="zig-out/bin"
@@ -40,8 +36,6 @@ for target in "${TARGETS[@]}"; do
 	elif [ -f "$DIR/$REPO.exe" ]; then
 		mv "$DIR/$REPO.exe" "$OUTPUT.exe"
 	fi
-	
-	sha256sum "$DIR"/rnm-* > "$DIR/checksums.txt"
 	
 	if [ -f "$OUTPUT" ] || [ -f "$OUTPUT.exe" ]; then
 		echo -e "\033[32m✓\033[0m Made $OUTPUT"

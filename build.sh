@@ -2,10 +2,6 @@
 
 set -e
 
-#! /bin/bash
-
-set -e
-
 REPO="rnm"
 
 DIR="zig-out/bin"

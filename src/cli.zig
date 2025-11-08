@@ -32,7 +32,6 @@ pub const HELP =
     \\Options:
     \\  -h, --help             Display this help message
     \\  -v, --version          Display the version number
-    \\
     \\  -l, --length <3-10>    Define the length of the name
     \\  -f, --first <char>     Define the first letter of the name
 ;

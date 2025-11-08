@@ -48,8 +48,7 @@ pub fn parseArgs(allocator: std.mem.Allocator) !CliOpts {
     defer args.deinit();
 
     var options = CliOpts{};
-
-    _ = args.next();
+    _ = args.next(); // Skip name
 
     while (args.next()) |arg| {
         if (std.mem.eql(u8, arg, "-h") or std.mem.eql(u8, arg, "--help") or std.mem.eql(u8, arg, "help") or std.mem.eql(u8, arg, "-H")) {

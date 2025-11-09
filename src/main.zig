@@ -30,32 +30,33 @@
 // Repo: https://github.com/bxavaby/rnm
 
 const std = @import("std");
-const rnm = @import("rnm");
+const cli = @import("cli");
+const r = @import("r");
 
 pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     const allocator = gpa.allocator();
 
     // Parse cli args
-    const options = rnm.cli.parseArgs(allocator) catch |err| switch (err) {
+    const options = cli.parseArgs(allocator) catch |err| switch (err) {
         error.MissingLength => {
-            rnm.cli.printHelpWithEr("missing argument after -l");
+            cli.printHelpWithEr("missing argument after -l");
             return;
         },
         error.InvalidLength => {
-            rnm.cli.printHelpWithEr("length must be 3-10");
+            cli.printHelpWithEr("length must be 3-10");
             return;
         },
         error.MissingFirstLetter => {
-            rnm.cli.printHelpWithEr("missing argument after -f");
+            cli.printHelpWithEr("missing argument after -f");
             return;
         },
         error.InvalidFirstLetter => {
-            rnm.cli.printHelpWithEr("first letter must be a single character a-z");
+            cli.printHelpWithEr("first letter must be a single character a-z");
             return;
         },
         error.UnknownFlag => {
-            rnm.cli.printHelpWithEr("unknown flag");
+            cli.printHelpWithEr("unknown flag");
             return;
         },
         else => |e| {
@@ -65,18 +66,18 @@ pub fn main() !void {
     };
 
     if (options.help) {
-        std.debug.print("{s}\n{s}\n", .{ rnm.cli.LOGO, rnm.cli.HELP });
+        std.debug.print("{s}\n{s}\n", .{ cli.LOGO, cli.HELP });
         return;
     }
 
     if (options.version) {
-        std.debug.print("rnm {s}\n", .{rnm.cli.VERSION});
+        std.debug.print("rnm {s}\n", .{cli.VERSION});
         return;
     }
 
     // Local stack buffer for the name
     var buffer: [10]u8 = undefined;
-    const name = try rnm.r.makeName(&buffer, options.length, options.first);
+    const name = try r.makeName(&buffer, options.length, options.first);
 
     std.debug.print("{s}\n", .{name});
 }

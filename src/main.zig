@@ -25,7 +25,6 @@
 // - r.zig: generator logic
 //
 // Licensed under the MIT License.
-// Copyright (c) 2025 bxavaby
 //
 // Repo: https://github.com/bxavaby/rnm
 

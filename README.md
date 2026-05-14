@@ -9,7 +9,7 @@
 
 # _random name maker_
 
-### Generate random names in the command-line with ```rnm```
+### Generate random names in the command-line with `rnm`
 
 <br>
 
@@ -21,11 +21,13 @@
 
 ## Install
 
-Download the latest binary for your platform from [**Releases**](../../releases/latest) and add it to your PATH:
+Download the latest binary for your platform from
+[**Releases**](../../releases/latest) and add it to your PATH:
 
 <br>
 
 **Linux (x86_64):**
+
 ```
 wget https://github.com/bxavaby/rnm/releases/latest/download/rnm-linux-x86_64
 chmod +x rnm-linux-x86_64
@@ -33,6 +35,7 @@ sudo mv rnm-linux-x86_64 /usr/local/bin/rnm
 ```
 
 **Linux (ARM64):**
+
 ```
 wget https://github.com/bxavaby/rnm/releases/latest/download/rnm-linux-aarch64
 chmod +x rnm-linux-aarch64
@@ -40,6 +43,7 @@ sudo mv rnm-linux-aarch64 /usr/local/bin/rnm
 ```
 
 **macOS (Intel):**
+
 ```
 curl -LO https://github.com/bxavaby/rnm/releases/latest/download/rnm-macos-x86_64
 chmod +x rnm-macos-x86_64
@@ -47,6 +51,7 @@ sudo mv rnm-macos-x86_64 /usr/local/bin/rnm
 ```
 
 **macOS (Apple Silicon):**
+
 ```
 curl -LO https://github.com/bxavaby/rnm/releases/latest/download/rnm-macos-aarch64
 chmod +x rnm-macos-aarch64
@@ -71,16 +76,18 @@ sudo mv zig-out/bin/rnm /usr/local/bin/
 
 <br>
 
-> ※ **Note:** If you are on Windows, download `rnm-windows-x86_64.exe` from [Releases](../../releases/latest) and add to your PATH.
+> ※ **Note:** If you are on Windows, download `rnm-windows-x86_64.exe` from
+> [Releases](../../releases/latest) and add to your PATH.
 
 <br>
 
 ## Usage
 
 **Flags:**
-- `-l` `<3–10>` _defines the length_ 
+
+- `-l` `<3–10>` _defines the length_
 - `-f` `<char>` _defines the first letter_
-- `-v` / `version` _prints the current version_ 
+- `-v` / `version` _prints the current version_
 - `-h` / `help` _shows the help message_
 
 <br>
@@ -117,8 +124,6 @@ ezura
 <br>
 
 ───────────────────
-
-*First ziguana steps. Decided to make something moderately useful, while keeping it somewhat crude. Hence the logo.*
 
 **[Report Bug](../../issues)** | **[Suggest Feature](../../issues)**
 
